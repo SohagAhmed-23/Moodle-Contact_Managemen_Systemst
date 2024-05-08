@@ -17,9 +17,9 @@
 /**
  * Plugin's library functions.
  *
- * @package    local_footballscore
- * @copyright  2021 Shadman Ahmed
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+  * @package    local_cms
+  * @copyright  2024 Sohag Ahmed
+  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/cms/db" VERSION="20140724" COMMENT="XMLDB file for Moodle local/cms"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_cms" COMMENT="This table saves information about local user">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="The description of the userName."/>
+        <FIELD NAME="email" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="The description of the userEmail."/>
+        <FIELD NAME="phone" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="The format of the description field of the user Phone NUmber."/>
+        <FIELD NAME="sex" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="The format of the description field of the User sex."/>
+      </FIELDS>
+      
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="The unique id for this assignment instance."/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

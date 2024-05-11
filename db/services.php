@@ -15,17 +15,20 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information
+ * Edit or Create a record.
  *
-* @package    local_cms
- * @copyright  2024 Sohag Ahmed
+ * @package    local_footballscore
+ * @copyright  2021 Shadman Ahmed
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->component = 'local_cms'; // Full name of the plugin (used for diagnostics).
-$plugin->version  = 2024010226;    // The current module version (Date: YYYYMMDDXX).
-$plugin->requires = 2021051705;    // Requires this Moodle version.
-
-?>
+$functions = array(
+    'local_cms_delete_score_by_id' => array(
+        'classname'   => 'local_cms_external',
+        'methodname'  => 'delete_score_by_id',
+        'classpath'   => 'local/cms/external.php',
+        'description' => 'Delete a single score by id',
+        'type'        => 'write',
+        'ajax'        => true
+    ),
+);

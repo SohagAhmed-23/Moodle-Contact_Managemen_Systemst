@@ -17,16 +17,33 @@
 {{!
     @template local_cms/manage
 
-
+ 
     Example context (json):
     {
         
     }
 }}
 
-<h3 class="mt-5 text-center"> User information</h3>
+<html> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>mustache</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style>
+.hov:hover {
+  background-color: black;
+}
+       
+       
+    </style>
+	</head> 
+	<body> 
+			
 
-<table class="table table-hover table-striped">
+
+<h3 class="mt-5 text-center" style="color:red"; }> User Information</h3>
+
+<table class="table table-hover table-striped ">
    <thead class="thead-dark">
     <tr>
     <th scope="col" class="text-center">Id </th>
@@ -47,9 +64,7 @@
           <td class="text-center">{{sex}}</td>
           <td class="text-center">
               <a href="{{editurl}}/?id={{id}}" class="btn btn-info">Edit </a>
-               <a href="{{deleteurl}}/?id={{id}}"  class="btn btn-danger delete-btn">Delete  </a>
-
-            
+              <button id="delete-btn-{{id}}" class="btn btn-danger delete-btn">Delete </button>
           </td>
      </tr>
     {{/texttodisplay}}
@@ -59,4 +74,8 @@
 <div class="text-center mt-5 pt-5">
     <a href="{{editurl}}" class="btn btn-primary">Create Entry </a>
 </div>
+	</body> 
+	</html> 
+
+
 

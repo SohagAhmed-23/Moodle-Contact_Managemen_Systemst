@@ -36,6 +36,7 @@ $PAGE->set_title(get_string('managepagetitle', 'local_cms'));
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('pluginname', 'local_cms'));
+$PAGE->requires->js_call_amd('local_cms/confirmdelete','init',array());
 
 local_cms_display_information();
 

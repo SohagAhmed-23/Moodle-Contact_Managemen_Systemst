@@ -11,3 +11,15 @@ $string['insertthanks'] = 'Thanks for inserting a record';
 $string['deletemessage'] = "The record was deleted successfully!";
 
 $string['managepagetitle'] = "Contact Mangement System";
+
+
+$string['id'] = 'ID';
+$string['deletescore'] = "Delete Scores";
+$string['deletetitle'] = "Confirm Delete";
+$string['modalmessage'] = "Do you really want to delete id?";
+$string['delete'] = "Delete";
+
+$string['localcmsurl'] = "Contact Management System";
+
+
+

@@ -37,7 +37,7 @@ function local_cms_display_information() {
     $templatecontext = (object) [
         'texttodisplay' => array_values($user_information),
         'editurl' => new moodle_url('/local/cms/edit.php'),
-        'deleteurl' => new moodle_url('/local/cms/delete.php'),
+    
     ];
 
     echo $OUTPUT->render_from_template('local_cms/manage', $templatecontext);
@@ -118,5 +118,12 @@ function local_cms_edit_information(edit_form $mform, int $id = null) {
  * @throws moodle_exception
  */
 
- 
+ function local_cms_delete_score($id) {
+    global $DB;
+    try {
+        $DB->delete_records('local_cms', array('id' => $id));
+    } catch (Exception $exception) {
+        throw new moodle_exception($exception);
+    }
+}
 

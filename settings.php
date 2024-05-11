@@ -1,5 +1,6 @@
+
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,17 +16,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information
+ * Adds admin settings for the plugin.
  *
-* @package    local_cms
- * @copyright  2024 Sohag Ahmed
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     local_helloworld
+ * @category    admin
+ * @copyright   2020 Your Name <email@example.com>
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+defined('MOODLE_INTERNAL') || die();
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_cms'; // Full name of the plugin (used for diagnostics).
-$plugin->version  = 2024010226;    // The current module version (Date: YYYYMMDDXX).
-$plugin->requires = 2021051705;    // Requires this Moodle version.
+if ($hassiteconfig) {
+    $ADMIN->add('localplugins', new admin_category('localplugins', get_string('localplugins')));
+    $ADMIN->add('localplugins', new admin_externalpage('local_cms_url', get_string('localcmsurl', 'local_cms'), "$CFG->wwwroot/local/cms/manage.php"));
+}
 
-?>
